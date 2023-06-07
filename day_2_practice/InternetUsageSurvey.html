@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Usage Survey</title>
+</head>
+<body>
+    <h2>Internet Usage Survey</h2>
+    <div>This survey is conducted to help Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,</div>  
+    <div>autem n nesciunt illo vitae accusamus praesentium veniam est facere quisquam sequi distinctio!</div>
+
+    <table border="1px">
+        <tr>
+            <td>What type of Internet connection do you have :</td>
+            <td>(Select one)</td>
+            <td><select name="any" id="any"><option value="">Disal Up</option><option value="">DSL</option><option value="">High speed cable</option><option value="">Other</option></select></td>
+        </tr>
+        <tr>
+            <td>What type of computer you use at your home ? :</td>
+            <td><input type="radio" name="ty" id="tya"><label for="tya">Desktop </label> &nbsp;&nbsp; <input type="radio" name="ty" id="ty"><label for="ty"> Laptop</label></td>
+        </tr>
+        <tr>
+            <td>How would you describe your Main reason for using internet? :</td>
+            <td><input type="radio" name="to" id="to">To Do Work Related Activity <br>
+                <input type="radio" name="to" id="to"><label for="">To Do  College Related Activity <br></label>
+                <input type="radio" name="to" id="to"><label for="">To Do  Entertainment Related Activity
+                     <br></label>
+                <input type="radio" name="to" id="to"><label for="">To Do  Other Activity <br></label>
+            </td> 
+        </tr>
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Type Of Site Visited</legend>
+                    What type of websites do you access most often?<br>
+                    check all that apply. <br>
+                    <input type="checkbox" name="ch" id="ch">SelfImprovement <br>
+                    <input type="checkbox" name="ch" id="ch">Entertainment <br>
+                    <input type="checkbox" name="ch" id="ch">Reference <br>
+                    <input type="checkbox" name="ch" id="ch">Email <br>
+                    <input type="checkbox" name="ch" id="ch">News and Sports <br>
+                </fieldset>
+
+               <td>
+                <fieldset>
+                    <legend>Time Spent Using Internet</legend>
+                    During an average week how long you spend online <br>
+                    <input type="radio" name="new" id="newone"><label for="newone">0-3 HRS </label> <br>
+                    <input type="radio" name="new" id="new">4-6 HRS <br>
+                    <input type="radio" name="new" id="new">7-10 HRS <br>
+                    <input type="radio" name="new" id="new">11-14 HRS <br>
+                    <input type="radio" name="new" id="new">15+ HRS <br>
+                </fieldset>
+               </td>
+            </td>
+        </tr>
+        <tr>
+           <td>plz comment on your opinion concerning internet privacy and safety</td> 
+        </tr> 
+        <tr>
+            <td> <textarea name="te" id="te" cols="30" rows="4"></textarea></td>
+        </tr>
+
+        <tr>
+            <td><label for="first">FirstName :</label> </td>
+            <td><input type="text" name="first" id="first" required minlength="3"></td>
+            <!-- <td><input type="text" name="first" id="first" required minlength="3"></td> -->
+
+            <td><label for="last"> LastName :</label></td>
+            <td><input type="text" name="last" id="last" required minlength="3"></td>
+        </tr>
+        <tr>
+            <td><label for="age">Age :</label></td>
+            <td><input type="number" name="age" id="age"></td>
+
+            <td><label for="zip">ZipCode</label></td>
+            <td><input type="number" name="zip" id="zip"></td>
+        </tr>
+
+        <tr>
+            <td><button id="bt1" name="bt1" type="submit">Click To Submit</button></td>
+            <td><button id="bt2" name="bt2" type="reset">Clear Form</button></td>
+
+        </tr>
+           
+           
+        
+    </table>
+</body>
+</html>

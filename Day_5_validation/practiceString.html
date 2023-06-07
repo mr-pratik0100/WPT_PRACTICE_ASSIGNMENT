@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practice</title>
+    <script>
+      function stringFunction() {
+
+        var pos=document.getElementById('ope');
+        var ind= pos.selectedIndex;
+        var ans=pos.options[ind].value;
+        var str =document.getElementById('txt').value;
+        // var pos = document.getElementById("ope");
+        // var ind = pos.selectedIndex;
+        // var ans = pos.options[ind].value;
+        // var str = document.getElementById("txt").value;
+
+        switch (ans) {
+          case "toLowerCase":
+           var result = str.toLowerCase();
+            break;
+
+            case "toUpperCase":
+            result = str.toUpperCase();
+            break;
+
+            case 'trim':
+            result=str.trim();
+            break;
+
+            case 'search':
+            pattern=/ain/gi
+            result =str.search(pattern);
+            break;
+
+            case 'match':
+            pattern=/ain/gi
+            result=str.match(pattern);
+            break;
+
+        }
+
+        document.getElementById('mydiv').innerHTML=result;
+      }
+    </script>
+  </head>
+  <body>
+    <label for="txt">Enter String :</label>
+    <input type="text" name="txt" id="txt" />
+
+    <label for="ope">Operations :</label>
+    <select name="ope" id="ope">
+      <option value="toLowerCase">toLowerCase</option>
+      <option value="toUpperCase">toUpperCase</option>
+      <option value="trim">trim</option>
+      <option value="search">search</option>
+      <option value="match">match</option>
+      <option value="concat">concat</option>
+      <option value="slice">slice</option>
+      <option value="charAt">charAt</option>
+      <option value="replace">replace</option>
+      <option value="split">split</option>
+      <option value="indexOf">indexOf</option>
+      <option value="includes">includes</option>
+    </select>
+
+    <button id="btn" name="btn" type="button" onclick="stringFunction()">
+      Display Result
+    </button>
+
+    <div id="mydiv">
+
+    </div>
+  </body>
+</html>

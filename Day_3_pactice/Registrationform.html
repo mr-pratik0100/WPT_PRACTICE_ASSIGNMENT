@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        #parent{
+            border: 1px solid red;
+            background-color: skyblue;
+            width: 40vw;
+            margin: auto;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            /* margin-top: 20%; */
+            /* height: 80%; */
+            
+        }
+        label{
+            float: right;
+        }
+        #field{
+            /* height: 60%; */
+            border: 2px solid black;
+            /* width: 50%; */
+        }
+        #legend{
+            height: 70%;
+        }
+        tbody tr{
+          
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <fieldset id="field">
+            
+            <legend>Registration Details</legend>
+            <table cellpadding="10">
+                <tbody>
+                    <tr>
+                        <td><label for="un">University :</label> </td>
+                        <td><input type="text" class="un" id="un" autofocus required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="un">Institute :</label> </td>
+                        <td><input type="text" class="un" id="un"  required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="br">Branch :</label></td>
+                       <td><select name="br" id="br" value="select"><option value="cs">CS</option> <option value="cs">IT</option><option value="cs">ENTC</option></select></td>
+
+                    </tr>
+
+                    <tr>
+                        <td><label for="degree">Degree</label></td>
+                        <td><select name="na" id="na" value="select"><option value="be">B-Tech</option><option value="be">BE</option><option value="be">M-Tech</option></select> &nbsp;<input type="radio" name="rad" id="rad">Pursuing &nbsp;&nbsp; <input type="radio" name="rad" id="rad">Completed</td>
+                        <!-- or -->
+                        <!-- <td><input type="radio" name="rad" id="rad">Pursuing &nbsp;&nbsp; <input type="radio" name="rad" id="rad">Completed</td> -->
+                        
+                    </tr>
+                    <tr>
+                        <td><label for="cpi">Average CPI :</label></td>
+                        <td><input type="number" name="num" id="num">&nbsp;Upto <input type="number" name="num" id="num">&nbsp;Th Semester</td>
+                    </tr>
+                    <tr>
+                        <td><label for="exp">Experience :</label></td>
+                        <td><input type="number" name="ye" id="ye">&nbsp;Years</td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="exp">Your Website Or Blog :</label></td>
+                        <td><input type="text" name="ye" id="ye" value="//http :">&nbsp;Years</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+        </fieldset>
+        
+    </div>
+    
+</body>
+</html>

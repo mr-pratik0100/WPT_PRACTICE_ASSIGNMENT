@@ -1,0 +1,52 @@
+<html>
+    <body>
+        <script>
+           function test(f){
+            setTimeout(()=>{
+                console.log('within test function')
+                console.log("within timeout before calling f1")
+                f2();
+                console.log("within timeout after calling f1")
+            },500);
+        }
+            console.log('hello world');
+            function f1(){
+                console.log("in f1");
+            }
+            function f2(){
+                console.log("in f2");
+            }
+
+            console.log("before test function");
+            test(f1);
+            console.log("before calling f1");
+            test(f2);
+            f1();
+            console.log("after f1");
+
+            console.log("End of exit");
+            alert("hello world");
+
+
+          
+
+       
+
+        </script>
+    </body>
+</html>
+
+
+<!-- function test(f){
+    setTimeout(()=>{console.log("in test function")
+     f();
+},500);
+    //f();
+}
+function f1(){
+    console.log("in f1")
+}
+console.log("before test function")
+test(f1)
+
+ console.log("after test function") -->

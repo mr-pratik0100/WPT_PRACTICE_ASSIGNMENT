@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ValidatRadio</title>
+    <script>
+        var degree="";
+        function selectDegree(){
+            var arr=document.getElementsByName('degree');
+            for(var i=0;i<arr.length;i++){
+                if(arr[i].checked){
+                    degree=arr[i].value;
+                    document.getElementById('err').innerHTML=degree;
+                    return true;
+                }else{
+                    document.getElementById('err').innerHTML="Plz select degree";
+                    return false;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="radio" name="degree" id="be" value="be">
+    <label for="be">BE</label>
+    <input type="radio" name="degree" id="btech" value="btech">
+    <label for="btech">B-Tech</label>
+    <input type="radio" name="degree" id="me" value="me">
+    <label for="me">ME</label>
+    <input type="radio" name="degree" id="mtech" value="MTECH">
+    <label for="mtech">M-Tech</label>
+    <input type="radio" name="degree" id="ba" value="ba">
+    <label for="ba">BA</label>
+    <br>
+    <br>
+    <button id="btn" name="btn" type="button" onclick="selectDegree()">Select Degree</button><span id="err"></span>
+</body>
+</html>

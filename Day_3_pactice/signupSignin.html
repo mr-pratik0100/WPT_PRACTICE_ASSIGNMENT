@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignupSignin</title>
+    <style>
+        #parent{
+            background-color: black;
+            color: white;
+            width:  40%;
+            margin: auto;
+            margin-top: 10%;
+        }
+        .btn{
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            border-radius: 5px;
+            /* height: 50px;
+            width: 80px; */
+            cursor: pointer;
+        }
+
+        #btn:hover{
+            background-color: black;
+            color: white;
+        }
+        table tr input{
+            background-color: black;
+        }
+        fieldset{
+            border: 4px solid blue;
+        }
+        #check{
+            align-content: center;
+        }
+        #newbtn{
+           margin: 20px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <fieldset>
+            <legend><button id="btn" class="btn">Name and Address</button></legend>
+
+            <table cellpadding="10px">
+                <tr>
+                    <td><label for="ssn">SSN :</label> </td>
+                    <td><input type="text" name="ssn" id="ssn"><button class="btn">Fill in name and address</button></td>
+                </tr>
+                <tr>
+                    <td><label for="ssn">Full Name :</label> </td>
+                    <td><input type="text" name="ssn" id="ssn"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="ssn">Street and Name :</label> </td>
+                    <td><input type="text" name="ssn" id="ssn"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="ssn">Postal Code:</label> </td>
+                    <td><input type="text" name="ssn" id="ssn"></td>
+                </tr>
+                <tr>
+                    <td><label for="ssn">City :</label> </td>
+                    <td><input type="text" name="ssn" id="ssn"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend><button class="btn">Username and password</button></legend>
+
+            <table cellpadding="10px">
+                <tr>
+                    <td><label for="name"></label> Username : </td>
+                    <td><input type="text" name="name" id="name"></td>
+                </tr>
+                <tr>
+                    <td><label for="name"></label> Password : </td>
+                    <td><input type="text" name="name" id="name"></td>
+                </tr>
+                
+                   
+                
+            </table>
+            <input type="checkbox" id="check" name="check" id="check">show password
+        </fieldset>
+
+        <button class="btn" id="newbtn">Register</button>
+    </div>
+</body>
+</html>

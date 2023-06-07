@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamilton</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        
+        div ul{
+        display: flex;
+        border: 1px solid red;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-around;
+        list-style: none;
+        background-color: aquamarine;
+        height: 50px;
+        color: black;
+        cursor: pointer;
+    }
+    div ul :hover{
+        color: white;
+        background-color: cadetblue;
+    }
+    #res{
+        float: right;
+    }
+    #t1{
+        /* display: flex; */
+        justify-content: center;
+        width: 80%;
+        align-items: center;
+       
+    }
+    table thead{
+        background-color: aquamarine;
+        cursor: pointer;
+    }
+    table thead tr th:hover{
+        color: white;
+        background-color: cadetblue;
+    }
+    table tbody tr td{
+       
+     text-align: center;
+    }
+    #table{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div pre{
+        font-size: 20px;
+    }
+    #parent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100;
+        /* border: 2px solid red; */
+        margin: 10px;
+        height: 200px;
+    }
+    #left{
+        width: 40%;
+        /* border: 2px solid green; */
+        margin-right: 50px;
+    }
+    #right{
+        width: 30%;
+        border: 2px solid black;
+        border-radius: 15px;
+    }
+    footer{
+        width: 100%;
+       
+        text-align: center;
+        height: 35px;
+        padding-top: 15px;
+       
+        position: fixed;
+        bottom: 0;
+       background-color: aquamarine;
+        color: black;
+    }
+    
+    </style>
+</head>
+<body>
+   <header>
+        <div>
+            <ul>
+                <li>Home Page</li>
+                <li>Reservation</li>
+                <li>Facility</li>
+                <li>Virtual tour</li>
+                <li>Staff</li>
+                <li>Calender of year</li>
+                <li>Contact Info</li>
+                <li>Direction</li>
+                <li>Faq</li>
+
+            </ul>
+        </div>
+        <div id="res">
+        <h3>Reservation for Conference room </h3>
+        <h4>Tuesday April 11</h4>
+        </div>
+    </header>
+    <br>
+    <br>
+
+        <div id="table">
+
+       
+        <table id="t1" border="1px" cellpadding="10px" cellspacing="0px">
+            <thead>
+                <tr>
+                    <th colspan="9">Morning</th>
+                    <th colspan="2">Noon</th>
+                    <th colspan="9">Afternoon</th>
+                </tr>
+               
+                <tr>
+                    <th>Room</th>
+                    <th>8:00</th>
+                    <th>8:30</th>
+                    <th>9:00</th>
+                    <th>9:30</th>
+                    <th>10:00</th>
+                    <th>10:30</th>
+                    <th>11:00</th>
+                    <th>11:30</th>
+                    <th>12:00</th>
+                    <th>12:30</th>
+                    <th>1:00</th>
+                    <th>1:30</th>
+                    <th>2:00</th>
+                    <th>2:30</th>
+                    <th>2:30</th>
+                    <th>3:00</th>
+                    <th>3:30</th>
+                    <th>4:00</th>
+                    <th>4:30</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="1">Sunrise Room</td>
+                    <td colspan="4">Marrage Encounter</td>
+                    <td colspan="4"></td>
+                    <td colspan="2">Marrage Encounter Launcehs</td>
+                    <td colspan="4"></td>
+                    <td colspan="5">Marraiage Encounter Talks</td>
+                </tr>
+                <tr>
+                  <td>Mountain view room </td>
+                  <td colspan="2">BreakFast Club of ohio</td> 
+                  <td colspan="4"></td>
+                  <td colspan="4">Ohio Conference of Librararies</td>
+                  <td colspan="2"></td>
+                  <td colspan="7">Ohio Book rise setup</td>
+                </tr>
+                <tr>
+                    <td>Arbor Hall</td>
+                    <td colspan="8">Computer Setup Expo</td>
+                    <td colspan="2"></td>
+                    <td colspan="9">Computer Expo Opening Session</td>
+
+                </tr>
+                <tr>
+                   <td>Michaell Theater</td> 
+                   <td colspan="15"></td>
+                   <td colspan="4">Youth Theater</td>
+                </tr>
+                <tr>
+                    <td>Gold Room</td>
+                    <td colspan="2"></td>
+                    
+                    <td colspan="4">The Tompkins Group</td>
+                    <td colspan="4">Parson Planning</td>
+                    <td colspan="4">Mothers Of Multiples</td>
+                    <td>Teen Connection</td>
+                </tr>
+                <tr>
+                    <td>Blue Room</td>
+                    <td colspan="2"></td>
+                    
+                    <td colspan="3"> Retirment Planning</td>
+                   
+                    <td colspan="3">The Senior Group</td>
+                    <td colspan="3">Senior Launches</td>
+                    <td colspan="5">Senior Classes</td>
+                    <td colspan="3">Tutoring</td>
+                </tr>
+                <tr>
+                    
+                    <td colspan="1">Green Room </td>
+                    <td colspan="2"></td>
+                    <td colspan="4">Drivers Ed</td>
+                    <td colspan="5">Movie Club</td>
+                    <td colspan="4"></td>
+                    <td colspan="4">Tutoring</td>
+                </tr>
+            </tbody>
+        </table>
+    
+    </div>
+
+    <div id="parent">
+        <div id="left">
+            <div>
+                 To reserve a room please contact Yancy Inwe at extension 388 or be e-mai at
+                <a href="yancinwe@hconfcenter.org">yancinwe@hconfcenter.org</a> Reservations should be made at least 48 hours in advance Cancellations require 24 hours in advance cancellations require 24 hours notice Room deposite will not ne returned for cancellations within 24 hours of the scheduled event.
+            </div>
+        </div>
+        <div id="right">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Sunrise Room  : </td>
+                        <td>Maximum Capacity :</td>
+                        <td>80</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mountain view Room  : </td>
+                        <td>Maximum Capacity :</td>
+                        <td>150</td>
+                    </tr>
+
+                    <tr>
+                        <td>Arbor Hall Room  : </td>
+                        <td>Maximum Capacity :</td>
+                        <td>190</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mitchell Theater  : </td>
+                        <td>Maximum Capacity :</td>
+                        <td>120</td>
+                    </tr>
+
+                    <tr>
+                        <td>Gold Room  : </td>
+                        <td>Maximum Capacity :</td>
+                        <td>40</td>
+                    </tr>
+
+                    <tr>
+                        <td>Blue Room  : </td>
+                        <td>Maximum Capacity :</td>
+                        <td>30</td>
+                    </tr>
+
+                    <tr>
+                        <td>Green Room  : </td>
+                        <td>Maximum Capacity :</td>
+                        <td>55</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div>
+        <footer>
+           <b> &copy; CDAC IACSD PUNE </b> 
+        </footer>
+    </div>
+        
+        
+   
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <table>
+        <div>
+            <tr>
+                <td> <img src="./hamelton.jpeg" alt="img" width="140 px"><span style="font-size: xx-large;">Hamilton</span></td>
+            </tr>
+            <tr>
+                <td><span style="font-size: xx-large;">  Conference Center</span>
+                    </td>
+            </tr>
+        </div> -->
+         <!-- </table>
+    -->

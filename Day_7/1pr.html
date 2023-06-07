@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+    <script>
+        arr=[{pid:1,pname:'apple',pquanti:10,pprice:100},{pid:2,pname:'banana',pquanti:20,pprice:200},{pid:3,pname:'chiku',pquanti:30,pprice:300},{pid:4,pname:'mango',pquanti:40,pprice:400}]
+        
+
+        const displayTable=(a=arr)=>{
+            str="<table border=2><tr><th>Product Id</th><th>Product Name</th><th>Product Quantity</th><th>Product Price</th></tr>"
+            for(let ele of a){
+                str+=`<tr><td>${ele.pid}</td><td>${ele.pname}</td><td>${ele.pquanti}</td><td>${ele.pprice}</td></tr>`
+            }
+            str+="</table>"
+            document.getElementById('mydiv1').innerHTML=str;
+        }
+
+        const clearForm=()=>{
+            document.getElementById('pid').value="";
+            document.getElementById('pname').value="";
+            document.getElementById('pquanti').value="";
+            document.getElementById('pprice').value="";
+        }
+
+        const addData=()=>{
+            var pi=parseInt(document.getElementById('pid').value);
+            var pn=(document.getElementById('pname').value);
+            var pq=parseInt(document.getElementById('pquanti').value);
+            var pp=parseInt(document.getElementById('pprice').value);
+
+           var obj={pid:pi,pname:pn,pquanti:pq,pprice:pp};
+            arr.push(obj);
+            displayTable();
+            clearForm();
+        }
+        // var deleteproduct=()=>{
+        //     var pid=parseInt(document.getElementById("pid").value)
+        //     // var pos=arr.findIndex(a=>a.pid===pid)
+           
+        //     if(pos!=-1){
+        //         var ans=confirm(`${pid} do you want tot delete(y/n)`)
+        //         if(ans){
+        //            arr.splice(pos,1)
+        //         }
+        //         displaytable()
+        //     }else{
+        //         alert("not found")
+        //     }
+
+        //     clearform()
+        //  }
+
+        const deleteData=()=>{
+            let p=parseInt(document.getElementById('pid').value);
+            let pos=arr.findIndex((ele)=>{return ele.pid===p});
+            // let pos =arr.findIndex(ele=>ele.pid===pid);
+            if(pos>=0){
+                var ans=confirm("Are You Sure You Want To Delete Element (y/n)");
+                if(ans){
+                    arr.splice(pos,1);
+                }
+                displayTable();
+            }else{
+                
+                confirm("element not present");
+            }
+            clearForm();
+        }
+
+        const updateData=()=>{
+            let id=parseInt(document.getElementById("pid").value);
+            let pos = arr.findIndex((e)=>{ return e.pid===id})
+            
+            if(pos>=0){
+               let ans = confirm("Are you sure you want to change prod quantity and price");
+               if(ans){
+                let q1=parseInt(prompt("enter new quantity"));
+                let p1=parseInt(prompt("enter new price "));
+
+                arr[pos].pquanti=q1;
+                arr[pos].pprice=p1;
+                
+                displayTable();
+               alert("updated successfully");
+               }else{
+                alert("plz enter proper id");
+               }
+            }
+        }
+            // const displayData=()=>{
+
+            // }
+
+            const filterData=(event)=>{
+                if(event.which==13){
+                    let text =document.getElementById('mydiv2').value;
+                    arr2=arr.filter(e=>e.pname.includes(text));
+                    displayTable(arr2);
+                }
+            }
+
+        
+       
+        
+
+
+    </script>
+</head>
+<body onload="displayTable()">
+   
+    <table>
+        <tr>
+            <td><label for="name">Product Id :</label></td>
+            <td><input type="text" name="pid" id="pid" autofocus><span id="piderr" ></span><br></td>
+            
+        </tr>
+        <tr>
+            <td><label for="pname">Product Name :</label></td>
+            <td><input type="text" name="pname" id="pname"><span id="pnameerr"></span><br></td>
+        </tr>
+        <tr>
+            <td> <label for="pquanti">Product Quantity :</label></td>
+            <td> <input type="text" name="pquanti" id="pquanti"><span id="pquantierr"></span><br></td>
+           
+        </tr>
+
+        <tr>
+           <td> <label for="pprice">Product Price :</label></td>
+           <td> <input type="text" name="pprice" id="pprice"><span id="ppriceerr"></span><br></td>
+        </tr>
+    </table><br>
+
+    <button id="addbtn" name="dbtn" type="btn" value="addbtn" onclick="addData()">Add New Product</button>
+    <button id="delbtn" name="btn" type="btn" value="delbtn" onclick="deleteData()">Delete Product</button>
+    <button id="updbtn" name="btn" type="btn" value="updbtn" onclick="updateData()">Update Product</button><br>
+    <br>
+
+    <label for="search" >Search :</label>
+    <input type="text" name="search" id="search" onkeydown="filterData()">
+
+    <div id="mydiv1">
+
+    </div>
+    <div id="mydiv2">
+
+    </div>
+</body >
+
+
+
+
+<!-- const displayTable=(a=arr)=>{
+    str="<table border=2><tr><th>ProdId</th><th>ProdName</th><th>ProdQuantity</th><th>ProdPrice</th></tr>"
+      
+        for(var ele of a){
+            str+=`<tr><td>${ele.pid}</td><td>${ele.pname}</td><td>${ele.pquanti}</td><td>${ele.pprice}</td></tr>`
+        }
+    str+="</table>"
+    document.getElementById("mydiv1").innerHTML=str;
+} -->

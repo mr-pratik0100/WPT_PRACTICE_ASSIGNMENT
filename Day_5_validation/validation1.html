@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+        }
+        #parent{
+            background-color: rosybrown;
+            border: 2px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            
+        }
+       
+    </style>
+    <script>
+       
+        function validateNum(no,err){
+            var a= document.getElementById(no).value;
+            if(a==='' || isNaN(a)){
+                document.getElementById(err).innerHTML="plz enter valid number";
+                return false;
+            }
+            else{
+                document.getElementById(err).innerHTML="";
+                return true;
+            }
+        }
+
+        function addNumbers(){
+            var a=parseInt(document.getElementById('no1').value);
+            var b=parseInt(document.getElementById('no2').value);
+            var res=a+b;
+            document.getElementById('mydiv').innerHTML="sum of two no is :"+res;
+            document.getElementById('result').value=res;
+        }
+
+
+       function validateAndSumTwoNo(){
+          var flag1=  validateNum('no1','err1');
+          var flag2=  validateNum('no2','err2');
+          if(flag1 && flag2){
+            addNumbers();
+          }
+       }
+
+       
+    </script>
+</head>
+<body>
+        <div id="parent">
+
+        
+        <table cellspacing="40px">
+            <tr>
+                <td>
+                    <label for="no1">Enter No 1 :</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="no1" ><span>*</span><span id="err1"></span>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="no2">Enter No 2 :</label>
+                </td>
+                <td>
+                    <input type="text" name="name" id="no2" ><span>*</span><span id="err2"></span>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="result">Result :</label></td>
+                <td><input type="text" name="name" id="result" disabled></td>
+            </tr>
+           
+        </table>
+
+        <button type="button" id="btn" name="btn" value="add" onclick="validateAndSumTwoNo()">Result :</button>
+        <div id="mydiv">
+
+        </div>
+
+    </div>
+</body>
+</html>

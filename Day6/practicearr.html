@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+          arr=['pratik','Rohan','Shubham','Nehal'];
+        function displaylist(){
+           
+         str="<ul>"
+            for(var i=0;i<arr.length;i++){
+                str+="<li>"+arr[i]+"</li>"
+            }
+            str+="</ul>"
+            document.getElementById('mydiv').innerHTML=str;
+        }
+
+        // arr=["Kishori","Ganesh","namrata"]
+        // function displaylist(){
+        //    str="<ul>"
+        //    for(var i=0;i<arr.length;i++){
+        //     str+="<li>"+arr[i]+"</li>"
+        //    } 
+        //    str+="</ul>" 
+        //    console.log(str);
+        //    document.getElementById("mydiv").innerHTML=str;
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function displayDetails(){
+            displaylist();
+        }
+
+        function addName(){
+            var nam=document.getElementById('name').value;
+            arr.push(nam);
+            displaylist();
+            // document.getElementById('mydiv').innerHTML=str;
+        }
+
+        function deleteName(){
+            count=0;
+            var namdel=document.getElementById('name').value;
+            for(var i=0;i<arr.length;i++){
+                if(arr[i]===namdel){
+                    arr.splice(count,1);
+                    break;
+                }
+                count++;
+            }
+            displaylist();
+        }
+       
+    </script>
+</head>
+<body onload="displayDetails()">
+    <label for="name">Name :</label>
+    <input type="text" name="name" id="name">
+    <button id="btn1" name="btn" type="button" onclick="addName()">Add Name</button>
+    <button id="btn2" name="btn" type="button" onclick="deleteName()">Delete Name</button>
+
+    <div id="mydiv">
+
+    </div>
+</body>
+</html>

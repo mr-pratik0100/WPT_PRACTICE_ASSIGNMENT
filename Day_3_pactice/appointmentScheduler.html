@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Schedular</title>
+    <style>
+        #field{
+            width: 60%;
+        }
+        #fid2{
+            width: 60%;
+        }
+        #btn{
+            margin: 15px;
+            background-color: black;
+            color: white;
+            width: 90px;
+            height: 30px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            
+        }
+        #btn:hover{
+            background-color: blanchedalmond;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+    <h1>Appointment Scheduler</h1>
+    <div id="first">
+
+    
+    <fieldset id="field">
+        <legend>Personal information</legend>
+        <label for="name">Name :</label><br>
+        <input type="text" name="name" id="name" required autofocus><br>
+        <br>
+        <label for="telno">Telephone Number :</label><br>
+        <input type="number" name="telno" id="telno"><br>
+        <br>
+        <label for="email">Email :</label><br>
+        <input type="email" name="email" id="email"><br>
+        <br>
+        <label for="dob">Date Of Birth :</label><br>
+        <input type="date" name="dob" id="dob">
+    </fieldset>
+    </div>
+    <div id="second">
+        <fieldset id="fid2">
+            <legend>Appointment Request</legend>
+            <label for="visit">What is the reason for your visit?</label><br>
+            <input type="text" name="visit" id="visit"><br>
+            <br>
+            <label for="pain">Current Pain Level :</label><br>
+            <input type="range" name="pain" id="pain"><br>
+            <br>
+            <label for="predate">Preferred Date :</label><br>
+            <input type="date" name="date" id="date"><br>
+            <br>
+            <label for="time">Prefeered Time :</label><br>
+            <input type="time" name="time" id="time">
+        </fieldset>
+        <button type="submit" id="btn" name="btn">Submit</button>
+    </div>
+
+    </div>
+</body>
+</html>

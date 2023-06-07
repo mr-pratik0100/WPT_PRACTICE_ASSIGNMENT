@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    padding: 20px;
+    border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    justify-content: space-around;
+    
+
+}
+nav ul li{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    /* list-style: none; */
+}
+nav ul li:hover{
+    
+   color: chartreuse;
+   
+}
